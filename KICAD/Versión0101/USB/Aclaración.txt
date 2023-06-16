@@ -1,0 +1,1 @@
+Directorio donde se alojan los modelos 3D de un usb A estandarizado, y su simbolo como huella asociada.
