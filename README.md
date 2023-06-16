@@ -16,20 +16,25 @@ También hay que disponer de una bluepill con un STM32F103C8Tx, posee 64Kbytes d
    El diseño es de reducido tamaño, permitiendo alojarlo en equipos estropeados y no recuperables.
 
    En precio asociado a la placa son aproximadamente 6€.
+---
 
-   Una lista de los pocos componentes necesarios:
-  • 6 condensadores de filtrado, ramas serie y paralelo.
-  • 4 resistencias. Dos de ellas prescindibles mediante programacion de pull down en las patillas K1 y L1 de la cyc1000.
-  • 2 potenciometros de señal para ajustar la intensidad.
-  • Asi como bastantes tiras de pines, machos y hembras también pines apilables usados en arduino.
-  • Un condensador electrolítico.
-  • Un pulsador.
-  • Un puerto usb A.
-  • Un puerto de vídeo compuesto.
-  • Disponer de una muestra de cyc1000 del programa Europero de fpgas de intel/arrow.
-  • Disponer de una bluepill.
-  • Así como un módulo i2s de texas instruments MCP5102A.
- 
+#   Una lista de los pocos componentes necesarios
+
+| Unidades  |     descripción      |  Precio medio en tienda física en España |
+|----------|:-------------:|------:|
+| 6 |  • condensadores de filtrado, ramas serie y paralelo. | ?€|
+| 4 |  • resistencias. Dos de ellas prescindibles mediante programacion de pull down en las patillas K1 y L1 de la cyc1000. |  ?€ |
+| 2 | • potenciometros de señal para ajustar la intensidad. |    ?€ |
+  | numerosos | • Asi como bastantes tiras de pines, machos y hembras también pines apilables usados en arduino. |    ?€ |
+  | 1 | • Un condensador electrolítico. |    ?€ |
+  | 1 | • Un pulsador. |    ?€ |
+  | 1 | • Un puerto usb A. |    ?€ |
+  | 1 | • Un puerto de vídeo compuesto. |    ?€ |
+  | 1 | • Disponer de una muestra de cyc1000 del programa Europero de fpgas de intel/arrow. |    ?€ |
+  | 1 | • Disponer de una bluepill. |    ?€ |
+  | 1 | • Así como un módulo i2s de texas instruments MCP5102A. |    ?€ |
+
+--- 
    Es con diferencia el sistema multicore más económico.
 
 Las placas necesarias:
