@@ -1,0 +1,1 @@
+Directorio donde se encuentra la versión  0101, queda limpiarla y reordenar todo el proyecto.
