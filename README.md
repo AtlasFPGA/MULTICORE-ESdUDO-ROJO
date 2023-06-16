@@ -12,10 +12,13 @@ También hay que disponer de una bluepill con un STM32F103C8Tx, posee 64Kbytes d
 
 ![Ajuste ANALÓGICO VIDEO COMPUESTO](https://github.com/AtlasFPGA/MULTICORE-ESDUDO-ROJO/blob/main/Fotos/Esquema_Anal%C3%B3gico_Ajustable_y_Usb-directo.png)
 
-
-
 ---
-
+# Esquema ESdUDO V0101
+![Esquemario ESdUDO ROJO V0101](https://github.com/AtlasFPGA/MULTICORE-ESDUDO-ROJO/blob/main/Fotos/Esquema%20de%20la%20Placa%20ESdUDO%20ROJO.png)
+---
+# Capas de la placa ESdUDO V0101
+![Placa ESdUDO ROJO V0101](https://github.com/AtlasFPGA/MULTICORE-ESDUDO-ROJO/blob/main/Fotos/Placa%20ESdUDO%20ROJO.png)
+---
 
    Este modelo implementa soluciones de muy baja latencia, al usar envoltorios con máquinas de estado finito para el video compuesto y el teclado.
    
