@@ -8,8 +8,10 @@ Diseñar la placa - ´Créalo tu mismo de coste más reducido para la Fpga CYC10
 También hay que disponer de una bluepill con un STM32F103C8Tx, posee 64Kbytes de Flash y 20Kbytes de sram, con una unidad de proceso ARM cortex M3 de 32bit funcionando a 72Mhz. 
 
    Este modelo implementa soluciones de muy baja latencia, al usar envoltorios con máquinas de estado finito para el video compuesto y el teclado.
-   https://github.com/TheSonders/COLOR_PAL
-   https://github.com/TheSonders/USBKeyboard
+   
+###   https://github.com/TheSonders/COLOR_PAL
+   
+###   https://github.com/TheSonders/USBKeyboard
 
    El diseño es de reducido tamaño, permitiendo alojarlo en equipos estropeados y no recuperables.
 
