@@ -33,13 +33,21 @@ También hay que disponer de una bluepill con un STM32F103C8Tx, posee 64Kbytes d
    Es con diferencia el sistema multicore más económico.
 
 Las placas necesarias:
+
 BLUEPILL STM32F103C8T6:
+
 https://es.aliexpress.com/item/1005002976480289.html
+
 SD+TFT AZ-Delivery de 1,8Pulgadas:
+
 https://es.aliexpress.com/item/1005005060814683.html
+
 CYC1000 versión mejorada del 2023 TEI0003-03-QFCR4A-CYC1000:
+
 https://shop.trenz-electronic.de/en/TEI0003-03-QFCR4A-CYC1000-with-Cyclone-10-FPGA-8-MB-SDRAM-8-MB-Flash-6.15-x-2.5-cm?c=480
+
 O una muestra en el programa europeo de microfpgas:
+
 https://www.arrow.com/en/family/intel-solutions-europe
 
 Grupo de la iniciativa ATLAS en TELEGRAM:
