@@ -1,0 +1,1 @@
+Posición donde se alojan los diagramas y la pcb con todas las capas en formato pdf.
