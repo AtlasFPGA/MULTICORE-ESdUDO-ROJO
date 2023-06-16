@@ -7,6 +7,16 @@ Diseñar la placa - ´Créalo tu mismo de coste más reducido para la Fpga CYC10
    Se muestra el multicore en desarrollo para cyc1000 de arrow/trenz el cual aloja una fpga Cyclone 10 LP de intel con 25kles y 66 bloques de Bram de 9Kbytes, tiene integrada una memoria de celular de bajo consumo y reducida latencia, siendo una sdram a 166Mhz con 8MBytes en un bus de 16bits, La familia Cyclone 10 LP permite implementar modelos que superan los 400Mhz en sus diseños, manteniendo un bajo consumo. 
 También hay que disponer de una bluepill con un STM32F103C8Tx, posee 64Kbytes de Flash y 20Kbytes de sram, con una unidad de proceso ARM cortex M3 de 32bit funcionando a 72Mhz. 
 
+---
+# Esquema analógico totalmente configurable por el usuario en el vídeo compuesto de 512 colores.
+
+![Ajuste ANALÓGICO VIDEO COMPUESTO](https://github.com/AtlasFPGA/MULTICORE-ESDUDO-ROJO/blob/main/Fotos/Esquema_Anal%C3%B3gico_Ajustable_y_Usb-directo.png)
+
+
+
+---
+
+
    Este modelo implementa soluciones de muy baja latencia, al usar envoltorios con máquinas de estado finito para el video compuesto y el teclado.
    
 ###   https://github.com/TheSonders/COLOR_PAL
