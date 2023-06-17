@@ -54,7 +54,7 @@ Las placas necesarias:
 
 BLUEPILL STM32F103C8T6:
 
-https://es.aliexpress.com/item/1005002976480289.html
+https://m.es.aliexpress.com/item/1005004918334754.html
 
 SD+TFT AZ-Delivery de 1,8Pulgadas:
 
