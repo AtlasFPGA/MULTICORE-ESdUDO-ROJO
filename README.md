@@ -59,8 +59,8 @@ BLUEPILL STM32F103C8T6 (Usada en el DISEÑO V0101):
 
 https://es.aliexpress.com/item/1005003429884084.html
 
-BLUEPILL STM32F103C8T6 Plus (Necesita adaptación una linea de 5V existe en lugar de GND, se producirá un buen corto si se opta por este modelo):
-Por lo demás es compatible en un rango de funcionamiento del 99% y tiene un punto que para el programador es interesante  duplica la flash disponible 128Kbytes.
+BLUEPILL STM32F103C8T6 Plus (Necesita adaptación una linea de 5V existe en lugar de GND, se producirá un buen corto si se opta por este modelo),
+por lo demás es compatible en un rango de funcionamiento del 99% y tiene un punto que para el programador es interesante  duplica la flash disponible 128Kbytes.
 
 https://m.es.aliexpress.com/item/1005004918334754.html
 
