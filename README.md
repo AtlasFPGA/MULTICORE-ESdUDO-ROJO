@@ -79,6 +79,6 @@ https://www.arrow.com/en/family/intel-solutions-europe
 Grupo de la iniciativa ATLAS en TELEGRAM:
 https://t.me/INICIATIVAATLAS
 
-Licencia:
+Licencia CERN OHL V2 STRICT:
 
 https://ohwr.orgcern_ohl_s_v2.txt
