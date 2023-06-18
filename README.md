@@ -22,9 +22,11 @@ Creamos una tabla para proceder con el ajuste analógico de la salida de vídeo 
 |1500 Ohm|1000 Ohm|2500 Ohm|80 Ohm|150 Ohm|230 Ohm|
 
 Para Composite 0 la corriente máxima se obtiene con 750 Ohm -> +3,3V/(750_Ohm)= 0,0044 Amperios
+
 Para Composite 0 la corriente mínima se obtiene con 2500 Ohm -> +3,3V/(2500_Ohm)= 0,00132 Amperios
 
 Para Composite 1 la corriente máxima se obtiene con 80 Ohm -> +3,3V/(80_Ohm)= 0,04125 Amperios -> La CYCLONE 10 LP esta limitada a 12Miliamperios ¿Lo fundimos?
+
 Para Composite 1 la corriente máxima se obtiene con 230 Ohm -> +3,3V/(230_Ohm)= 0,014347926 Amperios -> Por encima de la limitación de corriente 12Miliamperios
 
 Luego hay que calcular que valores de resistencia usar, en Composite 1 en las dos posiciones extremas se drena más corriente por pin.
