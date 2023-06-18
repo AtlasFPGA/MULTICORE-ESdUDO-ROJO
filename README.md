@@ -27,7 +27,7 @@ Para Composite 0 la corriente mínima se obtiene con 2500 Ohm -> +3,3V/(2500_Ohm
 
 Para Composite 1 la corriente máxima se obtiene con 80 Ohm -> +3,3V/(80_Ohm)= 0,04125 Amperios -> La CYCLONE 10 LP esta limitada a 12Miliamperios ¿Lo fundimos?
 
-Para Composite 1 la corriente máxima se obtiene con 230 Ohm -> +3,3V/(230_Ohm)= 0,014347926 Amperios -> Por encima de la limitación de corriente 12Miliamperios
+Para Composite 1 la corriente mínima en el diseño propuesto se obtiene con 230 Ohm -> +3,3V/(230_Ohm)= 0,014347926 Amperios -> Por encima de la limitación de corriente 12Miliamperios
 
 Luego hay que calcular que valores de resistencia usar, en Composite 1 en las dos posiciones extremas se drena más corriente por pin.
 También vemos que aporta más corriente Composite1 un valor más fuerte que Composite0, por lo que tenemos bien ordenadas las lineas por donde van las señales, pero al ser hardware programable, imaginamos que nos equivocamos, esta es una de las grandes cualidades de una FPGA, con una simple reordenadión de pineado y reetiquetado todo funciona perfectamente,es por esto que muchos diseños actualmente son programables ya sean microcontroladores, cplds o fpgas.
