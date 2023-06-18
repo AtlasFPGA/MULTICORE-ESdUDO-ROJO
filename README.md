@@ -41,6 +41,8 @@ Es lo más importante dado que la FPGA tiene limitada la cantidad de corriente q
 
 Sus resistencias se suman, la posición de las resistencias fijas es para proteger los circuitos y limitar la corriente, en realidad hemos puesto el valor represantado con el mayor valor resistivo y el menor de todos.
 
+# Pero como siempre pasa os he mentido, porque... ¿Realmente llega a 0V cuando el televisor recoge la señal?
+
 El caso de los condensadores/capacitores de filtrado es algo más complejo dado que las ramas que estan en serie siguen esta ley (Condensador=Capacitor):
 1/Condensador_equivalente = 1/Condensador_serie1 + 1/Condensador_serie2 + 1/Condensador_serie3 + ... + 1/Condensador_serieN
 Pero como vamos a usar valores del mismo condensador tenemos una rama preparada en serie.
