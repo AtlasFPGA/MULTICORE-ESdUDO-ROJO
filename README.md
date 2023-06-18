@@ -30,7 +30,7 @@ Para Composite 1 la corriente máxima se obtiene con 80 Ohm -> +3,3V/(80_Ohm)= 0
 Para Composite 1 la corriente máxima se obtiene con 230 Ohm -> +3,3V/(230_Ohm)= 0,014347926 Amperios -> Por encima de la limitación de corriente 12Miliamperios
 
 Luego hay que calcular que valores de resistencia usar, en Composite 1 en las dos posiciones extremas se drena más corriente por pin.
-También vemos que aporta más corriente Composite1 un valor más fuerte que Composite0, por lo que tenemos bien ordenadas las lienas, pero al ser hardware programable, imaginamos que nos equivocamos, esta es una de las grandes cualidades de una FPGA, con una simple reordenadión de pineado y reetiquetado todo funciona perfectamente,es por esto que muchos diseños actualmente son programables ya sean microcontroladores, cplds o fpgas.
+También vemos que aporta más corriente Composite1 un valor más fuerte que Composite0, por lo que tenemos bien ordenadas las lineas por donde van las señales, pero al ser hardware programable, imaginamos que nos equivocamos, esta es una de las grandes cualidades de una FPGA, con una simple reordenadión de pineado y reetiquetado todo funciona perfectamente,es por esto que muchos diseños actualmente son programables ya sean microcontroladores, cplds o fpgas.
 
 Luego la pregunta es, que resistencia en serie a +3,3V coloco para no fundir un pin de... ¿la preciada FPGA?
 doce miliamperios = 0,012_Amperios = +3,3_Voltios/Resistencia_protección_pin
