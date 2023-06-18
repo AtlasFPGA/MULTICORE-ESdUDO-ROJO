@@ -76,7 +76,7 @@ Practicamente 0 Faradios , 0'000000022 Faradios,0'000000033 Faradios ,0'00000004
 Hay un modo que he puesto su filtrado pero no esta explicado.
 Pero se vé lo útil de tener la dispoción de filtrado en capacidad, por supuesto si alguien quiere filtrar más la señal puede cambiando los modelos de condensador.
 
-Las resistencias tienen un valor fijo en R3 = 750 Ohm más la resistencia del potenciometro que tiene como valor máximo 1Kohm. Este valor esta sobre la señal 
+Las resistencias tienen un valor fijo en R3 y R4 y al menos tendrían que limitar la corriente al máximo que permite la familia Cyclone 10 Lp.
 ---
 # Esquema ESdUDO V0101
 ![Esquemario ESdUDO ROJO V0101](https://github.com/AtlasFPGA/MULTICORE-ESDUDO-ROJO/blob/main/Fotos/Esquema_ESdUDO_ROJO_V0101-Correcci%C3%B3n_Licencia.png)
