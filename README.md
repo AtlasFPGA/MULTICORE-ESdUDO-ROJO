@@ -15,8 +15,9 @@ También hay que disponer de una bluepill con un STM32F103C8Tx, posee 64Kbytes d
 Nota:
 
 Creamos una tabla para proceder con el ajuste analógico de la salida de vídeo compuesto.
+
 | R3  |     RV1   | VALOR RESISTIVO RAMA COMPOSITE 0  | R4  | RV2  |  VALOR RESISTIVO RAMA COMPOSITE 1|
-|:-------------:|------:|------:|------:|------:|
+|:-------------:|------:|------:|------:|------:|------:|
 |750 Ohm|0 Ohm|750 Ohm| 80 Ohm| 0 Ohm|80 Ohm|
 |1500 Ohm|1000 Ohm|2500 Ohm|80 Ohm|150 Ohm|230 Ohm|
 
