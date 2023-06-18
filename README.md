@@ -12,6 +12,68 @@ También hay que disponer de una bluepill con un STM32F103C8Tx, posee 64Kbytes d
 
 ![Ajuste ANALÓGICO VIDEO COMPUESTO](https://github.com/AtlasFPGA/MULTICORE-ESDUDO-ROJO/blob/main/Fotos/Esquema_Anal%C3%B3gico_Ajustable_y_Usb-directo.png)
 
+Nota:
+
+Creamos una tabla para proceder con el ajuste analógico de la salida de vídeo compuesto.
+| R3  |     RV1   | VALOR RESISTIVO RAMA COMPOSITE 0  | R4  | RV2  |  VALOR RESISTIVO RAMA COMPOSITE 1|
+|:-------------:|------:|------:|------:|------:|
+|750 Ohm|0 Ohm|750 Ohm| 80 Ohm| 0 Ohm|80 Ohm|
+|1500 Ohm|1000 Ohm|2500 Ohm|80 Ohm|150 Ohm|230 Ohm|
+
+Para Composite 0 la corriente máxima se obtiene con 750 Ohm -> +3,3V/(750_Ohm)= 0,0044 Amperios
+Para Composite 0 la corriente mínima se obtiene con 2500 Ohm -> +3,3V/(2500_Ohm)= 0,00132 Amperios
+
+Para Composite 1 la corriente máxima se obtiene con 80 Ohm -> +3,3V/(80_Ohm)= 0,04125 Amperios -> La CYCLONE 10 LP esta limitada a 12Miliamperios ¿Lo fundimos?
+Para Composite 1 la corriente máxima se obtiene con 230 Ohm -> +3,3V/(230_Ohm)= 0,014347926 Amperios -> Por encima de la limitación de corriente 12Miliamperios
+
+Luego hay que calcular que valores de resistencia usar, en Composite 1 en las dos posiciones extremas se drena más corriente por pin.
+También vemos que aporta más corriente Composite1 un valor más fuerte que Composite0, por lo que tenemos bien ordenadas las lienas, pero al ser hardware programable, imaginamos que nos equivocamos, esta es una de las grandes cualidades de una FPGA, con una simple reordenadión de pineado y reetiquetado todo funciona perfectamente,es por esto que muchos diseños actualmente son programables ya sean microcontroladores, cplds o fpgas.
+
+Luego la pregunta es, que resistencia en serie a +3,3V coloco para no fundir un pin de... ¿la preciada FPGA?
+doce miliamperios = 0,012_Amperios = +3,3_Voltios/Resistencia_protección_pin
+
+Resistencia_protección_pin = 275 Ohm
+
+Es lo más importante dado que la FPGA tiene limitada la cantidad de corriente que es capaz de entregar, y hacerle una conexión muy baja en resistencia puede fundir o dicho pin o parte de los pines de salida de la fpga, raramente toda la FPGA.
+
+Sus resistencias se suman, la posición de las resistencias fijas es para proteger los circuitos y limitar la corriente, en realidad hemos puesto el valor represantado con el mayor valor resistivo y el menor de todos.
+
+El caso de los condensadores/capacitores de filtrado es algo más complejo dado que las ramas que estan en serie siguen esta ley (Condensador=Capacitor):
+1/Condensador_equivalente = 1/Condensador_serie1 + 1/Condensador_serie2 + 1/Condensador_serie3 + ... + 1/Condensador_serieN
+Pero como vamos a usar valores del mismo condensador tenemos una rama preparada en serie.
+El condensador usado para el montaje son 6 condensadores de 22 pico faracios, una capacidad bastante pequeña.
+1 Mili = 0'001 Faradios
+1 Nano = 0'000001 Faradios
+1 Pico = 0'000000001 Faradios
+
+Entondes en realidad usamos condensadores/capacitores de:
+22 Pico Faradios = 0'000000022 Faradios
+
+cuando hacemos y despejamos esta ecuación 1/Faradios_rama_serie = 1/0'000000022_F + 1/0'000000022_F
+Sale un resultado de Faradios_rama_serie = 1/0'000000011 Faradios y en lenguaje de pico -> 11 pico Faradios
+
+Cuando hay condensadore/capacitores en paralelo se suman sus capacidades:
+Podemos no filtrar la señal -> 0Faradios pero esto nunca se cumple y menos con señales generadas a tanta frecuencia las pistas siempre tienen un contenido continuo de capacitancia, por eso siempre aparecen modelizaciones de spice.
+
+Usando los 2 condensadores en una sola rama en serie:
+Una capacidad de 11 Pico faracios.
+
+Poniendo un Condensador de 22 picofaracios entre la señal de salida de la fpga y GND.
+Una capacidad de 22 Pico faradios.
+
+Poniendo los 2 condensadores en paralelo se suman sus capacidades, (Tampoco es verdad si los condensaores estan limitados en voltaje):
+Pero bueno digamos que todo es ideal y son 44 Pico Faradios.
+
+La maxima capacidad es usar 2 condensadores en paralelo más una rama de condensadores en serie:
+22 Pico Faradios + 22 Pico Faradios + 11 Pico Faradios = 55 Pico Faradios.
+
+Luego con 4 condensadores en la disposición del circuito podemos tener estas capacidades.
+
+Practicamente 0 Faradios , 0'000000022 Faradios,0'000000033 Faradios ,0'000000044 Faradios y 0'000000055 Faradios
+Hay un modo que he puesto su filtrado pero no esta explicado.
+Pero se vé lo útil de tener la dispoción de filtrado en capacidad, por supuesto si alguien quiere filtrar más la señal puede cambiando los modelos de condensador.
+
+Las resistencias tienen un valor fijo en R3 = 750 Ohm más la resistencia del potenciometro que tiene como valor máximo 1Kohm. Este valor esta sobre la señal 
 ---
 # Esquema ESdUDO V0101
 ![Esquemario ESdUDO ROJO V0101](https://github.com/AtlasFPGA/MULTICORE-ESDUDO-ROJO/blob/main/Fotos/Esquema_ESdUDO_ROJO_V0101-Correcci%C3%B3n_Licencia.png)
@@ -35,7 +97,7 @@ También hay que disponer de una bluepill con un STM32F103C8Tx, posee 64Kbytes d
 
 | Unidades  |     descripción      |  Precio medio en tienda física en España |
 |----------|:-------------:|------:|
-| 6 |  • condensadores de filtrado, ramas serie y paralelo. | ?€|
+| 8 |  • condensadores de filtrado, ramas serie y paralelo. | ?€|
 | 4 |  • resistencias. Dos de ellas prescindibles mediante programacion de pull down en las patillas K1 y L1 de la cyc1000. |  ?€ |
 | 2 | • potenciometros de señal para ajustar la intensidad. |    ?€ |
   | numerosos | • Asi como bastantes tiras de pines, machos y hembras también pines apilables usados en arduino. |    ?€ |
