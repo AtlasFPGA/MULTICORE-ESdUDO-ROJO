@@ -44,7 +44,7 @@ Sus resistencias se suman, la posición de las resistencias fijas es para proteg
 El caso de los condensadores/capacitores de filtrado es algo más complejo dado que las ramas que estan en serie siguen esta ley (Condensador=Capacitor):
 1/Condensador_equivalente = 1/Condensador_serie1 + 1/Condensador_serie2 + 1/Condensador_serie3 + ... + 1/Condensador_serieN
 Pero como vamos a usar valores del mismo condensador tenemos una rama preparada en serie.
-El condensador usado para el montaje son 6 condensadores de 22 pico faracios, una capacidad bastante pequeña.
+El condensador usado para el montaje son 6 condensadores de 22 pico faradios, ya ser verán si se colocan todos o no, una capacidad bastante pequeña.
 1 Mili = 0'001 Faradios
 1 Nano = 0'000001 Faradios
 1 Pico = 0'000000001 Faradios
