@@ -1,0 +1,1 @@
+En esta carpeta se alojan los ficheros Step tridimensionales usados en la representación del montaje.
