@@ -144,7 +144,8 @@ O una muestra en el programa europeo de microfpgas:
 https://www.arrow.com/en/family/intel-solutions-europe
 
 Grupo de la iniciativa ATLAS en TELEGRAM:
-https://t.me/INICIATIVAATLAS
+
+# https://t.me/INICIATIVAATLAS
 
 Licencia CERN OHL V2 STRICT:
 
